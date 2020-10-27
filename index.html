@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hangman</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  </head>
 
-  <body>
-    <header>
-      <h1>Uppgift 03 - Hangman</h1>
-    </header>
-    <main>
-      <article>
-        <h2>Welcome to hangman!</h2>
-        <p>
-          When you click <i>Start a new game</i>, the computer will choose a
-          random word.<br />
-          At that point a number of boxes will appear. The number of boxes
-          matches the number of letters in the word.<br />
-          Your goal is to guess the word by clicking on the letter buttons.<br />
-          For each correct guess a letter will appear in the correct box for the
-          word.
-        </p>
-      </article>
-      <button class="btn btn--stripe" type="button" id="startGameBtn">
-        Start a new game
-      </button>
-      <section id="gameBoard">
-        <ul id="letterButtons">
-          <li><button class="btn btn--stripe" type="button" value="A">A</button></li>
-          <li><button class="btn btn--stripe" type="button" value="B">B</button></li>
-          <li><button class="btn btn--stripe" type="button" value="C">C</button></li>
-          <li><button class="btn btn--stripe" type="button" value="D">D</button></li>
-          <li><button class="btn btn--stripe" type="button" value="E">E</button></li>
-          <li><button class="btn btn--stripe" type="button" value="F">F</button></li>
-          <li><button class="btn btn--stripe" type="button" value="G">G</button></li>
-          <li><button class="btn btn--stripe" type="button" value="H">H</button></li>
-          <li><button class="btn btn--stripe" type="button" value="I">I</button></li>
-          <li><button class="btn btn--stripe" type="button" value="J">J</button></li>
-          <li><button class="btn btn--stripe" type="button" value="K">K</button></li>
-          <li><button class="btn btn--stripe" type="button" value="L">L</button></li>
-          <li><button class="btn btn--stripe" type="button" value="M">M</button></li>
-          <li><button class="btn btn--stripe" type="button" value="N">N</button></li>
-          <li><button class="btn btn--stripe" type="button" value="O">O</button></li>
-          <li><button class="btn btn--stripe" type="button" value="P">P</button></li>
-          <li><button class="btn btn--stripe" type="button" value="Q">Q</button></li>
-          <li><button class="btn btn--stripe" type="button" value="R">R</button></li>
-          <li><button class="btn btn--stripe" type="button" value="S">S</button></li>
-          <li><button class="btn btn--stripe" type="button" value="T">T</button></li>
-          <li><button class="btn btn--stripe" type="button" value="U">U</button></li>
-          <li><button class="btn btn--stripe" type="button" value="V">V</button></li>
-          <li><button class="btn btn--stripe" type="button" value="W">W</button></li>
-          <li><button class="btn btn--stripe" type="button" value="X">X</button></li>
-          <li><button class="btn btn--stripe" type="button" value="Y">Y</button></li>
-          <li><button class="btn btn--stripe" type="button" value="Z">Z</button></li>
-          <li><button class="btn btn--stripe" type="button" value="Å">Å</button></li>
-          <li><button class="btn btn--stripe" type="button" value="Ä">Ä</button></li>
-          <li><button class="btn btn--stripe" type="button" value="Ö">Ö</button></li>
-        </ul>
-        <section id="letterBoxes">
-          <!-- This is where the matched letters should appear, these should match the number of letters in the selected word -->
-          <ul></ul>
-        </section>
-        <img id="hangman" src="images/h0.png" alt="hangman" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Hangman</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Uppgift 03 - Hangman</h1>
+  </header>
+  <main>
+    <article>
+      <h2>Welcome to hangman!</h2>
+      <p>
+        When you click <i>Start a new game</i>, the computer will choose a
+        random word.<br />
+        At that point a number of boxes will appear. The number of boxes
+        matches the number of letters in the word.<br />
+        Your goal is to guess the word by clicking on the letter buttons.<br />
+        For each correct guess a letter will appear in the correct box for the
+        word.
+      </p>
+    </article>
+    <button class="btn btn--stripe" type="button" id="startGameBtn">
+      Start a new game
+    </button>
+    <section id="gameBoard">
+      <ul id="letterButtons">
+        <li><button class="btn btn--stripe" type="button" value="A">A</button></li>
+        <li><button class="btn btn--stripe" type="button" value="B">B</button></li>
+        <li><button class="btn btn--stripe" type="button" value="C">C</button></li>
+        <li><button class="btn btn--stripe" type="button" value="D">D</button></li>
+        <li><button class="btn btn--stripe" type="button" value="E">E</button></li>
+        <li><button class="btn btn--stripe" type="button" value="F">F</button></li>
+        <li><button class="btn btn--stripe" type="button" value="G">G</button></li>
+        <li><button class="btn btn--stripe" type="button" value="H">H</button></li>
+        <li><button class="btn btn--stripe" type="button" value="I">I</button></li>
+        <li><button class="btn btn--stripe" type="button" value="J">J</button></li>
+        <li><button class="btn btn--stripe" type="button" value="K">K</button></li>
+        <li><button class="btn btn--stripe" type="button" value="L">L</button></li>
+        <li><button class="btn btn--stripe" type="button" value="M">M</button></li>
+        <li><button class="btn btn--stripe" type="button" value="N">N</button></li>
+        <li><button class="btn btn--stripe" type="button" value="O">O</button></li>
+        <li><button class="btn btn--stripe" type="button" value="P">P</button></li>
+        <li><button class="btn btn--stripe" type="button" value="Q">Q</button></li>
+        <li><button class="btn btn--stripe" type="button" value="R">R</button></li>
+        <li><button class="btn btn--stripe" type="button" value="S">S</button></li>
+        <li><button class="btn btn--stripe" type="button" value="T">T</button></li>
+        <li><button class="btn btn--stripe" type="button" value="U">U</button></li>
+        <li><button class="btn btn--stripe" type="button" value="V">V</button></li>
+        <li><button class="btn btn--stripe" type="button" value="W">W</button></li>
+        <li><button class="btn btn--stripe" type="button" value="X">X</button></li>
+        <li><button class="btn btn--stripe" type="button" value="Y">Y</button></li>
+        <li><button class="btn btn--stripe" type="button" value="Z">Z</button></li>
+        <li><button class="btn btn--stripe" type="button" value="Å">Å</button></li>
+        <li><button class="btn btn--stripe" type="button" value="Ä">Ä</button></li>
+        <li><button class="btn btn--stripe" type="button" value="Ö">Ö</button></li>
+      </ul>
+      <section id="letterBoxes">
+        <!-- This is where the matched letters should appear, these should match the number of letters in the selected word -->
+        <ul></ul>
       </section>
-      <section id="message">
-        <!-- This is where messages should appear -->
-      </section>
-    </main>
-    <footer>
-      - Chas Academy - Hangman - Philip Krook FWD19 -
-    </footer>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script>addLetterClickEvent();</script>
-  </body>
+      <img id="hangman" src="images/h0.png" alt="hangman" />
+    </section>
+    <section id="message">
+      <!-- This is where messages should appear -->
+    </section>
+  </main>
+  <footer>
+    - Chas Academy - Hangman - Namn Namnsson Klass -
+  </footer>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script>addLetterClickEvent();</script>
+</body>
+
 </html>

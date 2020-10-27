@@ -1,4 +1,4 @@
-krooknet.com/u03
+juiceghost/u03-hangman
 
 to reset the game, click "start a new game"
 have fun!
